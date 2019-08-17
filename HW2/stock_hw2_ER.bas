@@ -56,6 +56,17 @@ Function main_calc()
             Cells(summary_idx, 12).Value = yearly_volume
             Cells(summary_idx, 10).Value = last_price - first_price
             
+            'format colors
+            If (last_price - first_price) > 0 Then
+                Cells(summary_idx, 10).Interior.Color = RGB(135, 255, 112)
+                Cells(summary_idx, 10).Font.Color = RGB(12, 62, 9)
+            Else
+                Cells(summary_idx, 10).Interior.Color = RGB(255, 112, 112)
+                Cells(summary_idx, 10).Font.Color = RGB(80, 19, 13)
+            End If
+            
+            
+            
             If first_price > 0 Then
                 Cells(summary_idx, 11).Value = (last_price - first_price) / first_price
             Else
@@ -70,10 +81,6 @@ Function main_calc()
             'reset all counters
             yearly_volume = 0
             first_price = Cells(i + 1, 3).Value
-            
-            
-            
-            
             
         Else
             'normal case
