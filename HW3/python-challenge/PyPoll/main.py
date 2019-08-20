@@ -6,7 +6,6 @@ def print_output(total_votes, candidates, perc, votes,winner): # a nice report
     output_string+=f"Total Votes: {total_votes}"+'\n'
     output_string+="----------------------------"+'\n'
     for x in range(len(candidates)):
-        #output_string+=candidates[x]+": "+str(perc[x])+" ("+str(votes[x])+")"+'\n'
         output_string+=f"{candidates[x]}: {perc[x]*100:.3f}% ({votes[x]})"+'\n'
     output_string+="----------------------------"+'\n'
     output_string+="Winner: "+winner+'\n'
