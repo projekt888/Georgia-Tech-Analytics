@@ -37,6 +37,6 @@ with open ('election_data.csv') as csv_file: #reads the file
 
 print(print_output(total_votes,candidates,percentages,votes,candidates[votes.index(max(votes))]))
 
-f = open("pyvote.txt", "x")
+f = open("pyvote.txt", "w")
 f.write(print_output(total_votes,candidates,percentages,votes,candidates[votes.index(max(votes))]))
 f.close()

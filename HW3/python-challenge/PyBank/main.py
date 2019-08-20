@@ -38,6 +38,6 @@ with open ('budget_data.csv') as csv_file: #reads the file
 
     print(print_output(months, net_total_profits, statistics.mean(changes),months_a[changes.index(max(changes))],max(changes),months_a[changes.index(min(changes))],min(changes)))
     ### NOW WRITE THIS TO A file
-    f = open("pybank.txt", "x")
+    f = open("pybank.txt", "w")
     f.write(print_output(months, net_total_profits, statistics.mean(changes),months_a[changes.index(max(changes))],max(changes),months_a[changes.index(min(changes))],min(changes)))
     f.close()
