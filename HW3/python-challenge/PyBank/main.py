@@ -5,11 +5,11 @@ import statistics
 def print_output(months, net_total_profits, avg, month_max,max,month_min,min): #creates the report
     output_string = "Financial Analysis"+'\n'
     output_string+="----------------------------"+'\n'
-    output_string+="Total Months: " + str(months)+'\n'
-    output_string+="Total " + str(net_total_profits)+'\n'
-    output_string+="Average  Change:" + str(avg)+'\n'
-    output_string+="Greatest Increase in Profits: " + month_max+ ": " + str(max)+'\n'
-    output_string+="Greatest Decrease in Profits: " + month_min+ ": " + str(min)+'\n'
+    output_string+=f"Total Months: {months}"+'\n'
+    output_string+=f"Total: ${net_total_profits:.0f}"+'\n'
+    output_string+=f"Average  Change: ${avg:.2f}"+'\n'
+    output_string+=f"Greatest Increase in Profits: {month_max} (${max:.0f})"+'\n'
+    output_string+=f"Greatest Decrease in Profits: {month_min} (${min:.0f})"+'\n'
     return(output_string)
 
 with open ('budget_data.csv') as csv_file: #reads the file
